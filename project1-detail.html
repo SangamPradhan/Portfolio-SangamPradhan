@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -26,7 +26,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
@@ -56,13 +56,14 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="index.html" class="active nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="index.html#portfolio" class="nav-link scrollto"><i
-                class="index.htmlbx bx-book-content"></i><span>Portfolio</span></a></li>
-          <li><a href="index.html#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="index.html" class="active nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a>
+          </li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i
+                class="bx bx-book-content"></i><span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -78,7 +79,7 @@
           <h2>Portfoio Details</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Portfoio Details</li>
+            <li>Project Details</li>
           </ol>
         </div>
 
@@ -96,15 +97,11 @@
               <div class="align-items-center swiper-wrapper">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                  <img src="assets/img/projects/card-slider.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                  <img src="assets/img/projects/card-slider1.png" alt="">
                 </div>
 
               </div>
@@ -125,26 +122,33 @@
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Category</strong>: CSS-Slider-3D Web design</li>
+                <li><strong>Client</strong>: None</li>
+                <li><strong>Project date</strong>: 24 September, 2024</li>
+                <li><strong>Project URL</strong>: <a href="https://sangampradhan.github.io/CSS-Slider-3D/">Live Demo</a>
+                </li>
               </ul>
             </div>
             <div class="portfolio-description">
               <h2>Related Projects</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia.
-                Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia
-                accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt
-                eius.
-              </p>
+              <a href="project2-detail.html">
+                <div class="related-project"></div>
+                <img src="assets/img/projects/invaderandshooter.png" alt="Related Project 1" class="img-fluid"
+                  style="width: 100%; height: 180px; object-fit: cover;">
+                <p>Space Invaders & Shooter</p>
+              </a>
+            </div>
+            <div class="related-project">
+              <img src="assets/img/projects/card-slider1.png" alt="Related Project 2" class="img-fluid"
+                style="width: 100%; height: 180px; object-fit: cover;">
+              <p>Related Project 2</p>
             </div>
           </div>
-
-
-
         </div>
+
+
+
+      </div>
 
       </div>
     </section><!-- End Portfolio Details Section -->
@@ -152,16 +156,17 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer"> <!-- Added id attribute to match the header structure -->
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong><span>PradhanSangam</span></strong>
       </div>
       <div class="credits">
-        Designed by <a href="">Sangam Pradhan</a>
+        Designed by <a href="https://www.linkedin.com/in/sangam-pradhan-b888b7287/?trk=opento_sprofile_topcard">Sangam
+          Pradhan</a>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi-arrow-up-short bi"></i></a>
