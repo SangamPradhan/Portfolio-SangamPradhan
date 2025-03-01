@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1096,4 +1095,18 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+/*--------------------------------------------------------------
+# Centered Paragraphs
+--------------------------------------------------------------*/
+.centered-paragraphs {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.centered-paragraphs p {
+  margin-bottom: 20px;
+  text-align: justify;
 }
