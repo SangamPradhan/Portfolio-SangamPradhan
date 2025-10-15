@@ -1,3 +1,3 @@
 # Hello! my name is Sangam Pradhan!!
-# A Bachelor gratduate student of Bsc.IT (Hons)
- Computer systems Engineering
+# A Bachelor gratduate student of Bsc.IT...
+
