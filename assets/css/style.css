@@ -172,15 +172,13 @@ h6 {
   justify-content: flex-start;
   /* Left align */
   color: #fff;
+  /* Force white text */
   padding: 12px 50px;
-  /* Padding for left positioning */
   margin-bottom: 15px;
   transition: 0.3s;
   font-size: 15px;
   width: 225px;
-  /* Increased width */
   max-width: 100%;
-  /* Ensure responsiveness */
 
   /* Liquid Glass Button Style */
   background: url("../img/liquid-bg.png") center center no-repeat;
@@ -194,7 +192,6 @@ h6 {
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 20px;
-  /* Increased space */
   color: #fff;
 }
 
@@ -398,47 +395,67 @@ section {
 }
 
 .facts .count-box {
-  padding: 30px;
+  padding: 20px;
+  /* Reduced from 30px */
   width: 100%;
+
+  /* Liquid Glass Theme */
+  background: url("../img/liquid-bg.png") center center no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  /* Slightly softer corners for smaller box */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: #fff;
 }
 
 .facts .count-box i {
   display: block;
-  font-size: 44px;
-  color: #149ddd;
+  font-size: 36px;
+  /* Reduced from 44px */
+  color: #fff;
+  /* White icon */
   float: left;
   line-height: 0;
 }
 
 .facts .count-box span {
-  font-size: 48px;
-  line-height: 40px;
+  font-size: 36px;
+  /* Reduced from 48px */
+  line-height: 30px;
   display: block;
   font-weight: 700;
-  color: #050d18;
-  margin-left: 60px;
+  color: #fff;
+  /* White text */
+  margin-left: 50px;
+  /* Adjusted margin */
 }
 
 .facts .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
+  padding: 10px 0 0 0;
+  margin: 0 0 0 50px;
+  /* Adjusted margin */
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  color: #122f57;
+  font-size: 13px;
+  /* Slightly smaller text */
+  color: #fff;
+  /* White text */
 }
 
 .facts .count-box a {
   font-weight: 600;
   display: block;
-  margin-top: 20px;
-  color: #122f57;
-  font-size: 15px;
+  margin-top: 15px;
+  color: #fff;
+  /* White link */
+  font-size: 14px;
   font-family: "Poppins", sans-serif;
   transition: ease-in-out 0.3s;
 }
 
 .facts .count-box a:hover {
-  color: #1f5297;
+  color: #e6e6e6;
+  /* Slight hover effect */
 }
 
 /*--------------------------------------------------------------
