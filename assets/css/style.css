@@ -151,7 +151,7 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu {
-  padding: 30px 0 0 0;
+  padding: 30px 0 0 27px;
 }
 
 .nav-menu * {
@@ -169,18 +169,26 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #a8a9b4;
-  padding: 12px 15px;
-  margin-bottom: 8px;
+  color: #fff;
+  padding: 12px 25px;
+  margin-bottom: 15px;
   transition: 0.3s;
   font-size: 15px;
+
+  /* Liquid Glass Button Style */
+  background: url("../img/liquid-bg.png") center center no-repeat;
+  background-size: cover;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* backdrop-filter: blur(4px); - Optional on opaque bg, but adds to the vibe if transparent used */
 }
 
 .nav-menu a i,
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color: #fff;
 }
 
 .nav-menu a:hover,
@@ -188,6 +196,8 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   text-decoration: none;
+  filter: brightness(1.1);
+  box-shadow: 0 6px 20px rgba(20, 157, 221, 0.4);
   color: #fff;
 }
 
@@ -195,7 +205,7 @@ h6 {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #149ddd;
+  color: #fff;
 }
 
 /* Mobile Navigation */
@@ -253,7 +263,8 @@ h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
-  padding-top: 445px; /* Added to move the container lower */
+  padding-top: 445px;
+  /* Added to move the container lower */
 }
 
 #hero h1 {
