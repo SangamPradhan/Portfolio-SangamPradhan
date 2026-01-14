@@ -396,66 +396,92 @@ section {
 
 .facts .count-box {
   padding: 20px;
-  /* Reduced from 30px */
   width: 100%;
+  position: relative;
+  isolation: isolate;
+  /* Create new stacking context */
+  border-radius: 20px;
+  /* Match the iOS radius look, example had 56px but 20px fits better here */
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.2);
+  background: none;
+  /* Clear previous backgrounds */
+  border: none;
+}
 
-  /* Liquid Glass Theme */
-  background: url("../img/liquid-bg.png") center center no-repeat;
-  background-size: cover;
-  border-radius: 15px;
-  /* Slightly softer corners for smaller box */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  color: #fff;
+.facts .count-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  /* Background layer */
+  border-radius: 20px;
+  box-shadow: inset 0 0 15px -5px rgba(0, 0, 0, 0.3);
+  /* Slightly adjusting color for theme */
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.facts .count-box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* Bottom filter layer */
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  filter: url(#glass-distortion);
+  -webkit-filter: url(#glass-distortion);
+}
+
+/* Ensure content sits on top of the effects */
+.facts .count-box i,
+.facts .count-box span,
+.facts .count-box p,
+.facts .count-box a {
+  position: relative;
+  z-index: 1;
 }
 
 .facts .count-box i {
   display: block;
   font-size: 36px;
-  /* Reduced from 44px */
-  color: #fff;
-  /* White icon */
+  color: #149ddd;
+  /* Theme blue icon */
   float: left;
   line-height: 0;
 }
 
 .facts .count-box span {
   font-size: 36px;
-  /* Reduced from 48px */
   line-height: 30px;
   display: block;
   font-weight: 700;
-  color: #fff;
-  /* White text */
+  color: #050d18;
+  /* Dark text */
   margin-left: 50px;
-  /* Adjusted margin */
 }
 
 .facts .count-box p {
   padding: 10px 0 0 0;
   margin: 0 0 0 50px;
-  /* Adjusted margin */
   font-family: "Raleway", sans-serif;
   font-size: 13px;
-  /* Slightly smaller text */
-  color: #fff;
-  /* White text */
+  color: #122f57;
+  /* Darker text */
 }
 
 .facts .count-box a {
   font-weight: 600;
   display: block;
   margin-top: 15px;
-  color: #fff;
-  /* White link */
+  color: #122f57;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   transition: ease-in-out 0.3s;
 }
 
 .facts .count-box a:hover {
-  color: #e6e6e6;
-  /* Slight hover effect */
+  color: #1f5297;
 }
 
 /*--------------------------------------------------------------
@@ -484,15 +510,55 @@ section {
 }
 
 .skills .progress-bar-wrap {
-  background: #dce8f8;
-  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  height: 18px;
+  /* Reduced thickness */
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  /* Tube depth effect */
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2), inset 0 -4px 6px rgba(255, 255, 255, 0.1), 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 
 .skills .progress-bar {
   width: 1px;
-  height: 10px;
+  height: 18px;
+  /* Reduced thickness */
   transition: 0.9s;
-  background-color: #149ddd;
+  border-radius: 20px;
+  /* Liquid effect */
+  background: linear-gradient(90deg, #149ddd 0%, #3dc0f1 50%, #149ddd 100%);
+  background-size: 200% 100%;
+  animation: liquidFlow 2s infinite linear;
+  box-shadow: 0 0 10px rgba(20, 157, 221, 0.5), inset 0 2px 2px rgba(255, 255, 255, 0.4), inset 0 -2px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Add a surface glare/reflection to the liquid */
+.skills .progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  /* Adjusted for smaller height */
+  left: 5px;
+  right: 5px;
+  height: 40%;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
+  filter: blur(1px);
+}
+
+@keyframes liquidFlow {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
 }
 
 /*--------------------------------------------------------------
